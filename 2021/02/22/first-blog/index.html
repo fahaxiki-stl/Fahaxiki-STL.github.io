@@ -18,7 +18,7 @@
 <meta name="description" content="折腾了一个上午，才算是搭建了一个简陋的个人博客。为了防止过两天连自己的博客都更新不了的意外发生，这里记录搬运一些hexo的指令。Orz 小白第一步，win+r，打开cmd。到目录D&#x2F;blog&#x2F;下开始。 这是我自己的文件位置。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="first blog &#x2F; 博客初建起">
-<meta property="og:url" content="http://example.com/2021/02/22/first-blog/index.html">
+<meta property="og:url" content="https://lllllan-0424.github.io/2021/02/22/first-blog/index.html">
 <meta property="og:site_name" content="lllllan的博客">
 <meta property="og:description" content="折腾了一个上午，才算是搭建了一个简陋的个人博客。为了防止过两天连自己的博客都更新不了的意外发生，这里记录搬运一些hexo的指令。Orz 小白第一步，win+r，打开cmd。到目录D&#x2F;blog&#x2F;下开始。 这是我自己的文件位置。">
 <meta property="og:locale">
@@ -93,7 +93,11 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 <body>
   <div id="container">
     <div class="left-col">
@@ -169,6 +173,8 @@
                         
                             <li><a href="/">主页</a></li>
                         
+                            <li><a href="/tags/">文章分类</a></li>
+                        
                             <li><a href="/archives/">所有文章</a></li>
                         
                         </ul>
@@ -193,7 +199,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
                     </div>
                 </section>
                 
@@ -245,6 +251,8 @@
                 <ul>
                 
                     <li><a href="/">主页</a></li>
+                
+                    <li><a href="/tags/">文章分类</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
@@ -442,7 +450,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/The-17th-Zhejiang-Provincial-Collegiate-Programming-Contest/">The 17th Zhejiang Provincial Collegiate Programming Contest</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/%E3%80%90Fahaxiki%EF%BC%81%E3%80%91%E7%9A%84%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/">【Fahaxiki！】的训练实录</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/first-blog/">first blog / 博客初建起</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/2020-ACM-ICPC-Asia-Shanghai-Regional/">2020 ACM ICPC, Asia Shanghai Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/hexo%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E9%97%B4%E8%B7%B3%E8%BD%AC/">hexo实现文章间跳转</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/The-17th-Zhejiang-Provincial-Collegiate-Programming-Contest/">The 17th Zhejiang Provincial Collegiate Programming Contest</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/%E3%80%90Fahaxiki%EF%BC%81%E3%80%91%E7%9A%84%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/">【Fahaxiki！】的训练实录</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/02/22/first-blog/">first blog / 博客初建起</a></li></ul>
 
 
 
@@ -539,7 +547,7 @@ MathJax.Hub.Queue(function() {
         var oOpenInNew = {
             
             
-            
+             post: ".article-entry a[href], .copyright a[href]", 
             
             
             
