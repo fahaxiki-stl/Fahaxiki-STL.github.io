@@ -32,9 +32,13 @@
 <meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图八-边的差分.jpg">
 <meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图九-求树的重心.jpg">
 <meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十-树的直径.jpg">
-<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的直径.jpg">
+<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/疑惑.jpg">
+<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的中心.jpg">
+<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/点头.jpg">
+<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/抽烟.gif">
+<meta property="og:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/原来是这样.jpg">
 <meta property="article:published_time" content="2021-02-23T04:45:48.000Z">
-<meta property="article:modified_time" content="2021-02-23T09:48:58.019Z">
+<meta property="article:modified_time" content="2021-02-23T15:06:52.097Z">
 <meta property="article:tag" content="树形DP">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lllllan-0424.github.io/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/无字之书.jpg">
@@ -194,15 +198,11 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/342310798@qq.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" rel="noopener" href="https://github.com/lllllan-0424" title="GitHub"></a>
                             
                                 <a class="fa 博客园" target="_blank" rel="noopener" href="https://www.cnblogs.com/0424lrn/" title="博客园"></a>
                             
                                 <a class="fa CSDN" target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46187157" title="CSDN"></a>
-                            
-                                <a class="fa QQ" href="/342310798" title="QQ"></a>
                             
                         </ul>
                     </nav>
@@ -211,7 +211,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E5%BD%A2DP/" rel="tag">树形DP</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E5%BD%A2DP/" rel="tag">树形DP</a></li></ul>
                     </div>
                 </section>
                 
@@ -274,15 +274,11 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/342310798@qq.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="https://github.com/lllllan-0424" title="GitHub"></a>
                             
                                 <a class="fa 博客园" target="_blank" href="https://www.cnblogs.com/0424lrn/" title="博客园"></a>
                             
                                 <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/m0_46187157" title="CSDN"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="/342310798" title="QQ"></a>
                             
                         </ul>
             </nav>
@@ -320,7 +316,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">3.7k字</span>
+        <span class="post-count">4.2k字</span>
       </span>
     </span>
 
@@ -329,7 +325,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">14分</span>
+        <span class="post-count">16分</span>
       </span>
     </span>
 </div>
@@ -633,7 +629,10 @@
 <li>定义<code>sz[i]</code>表示节点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>为根的子树的节点个数。</li>
 <li>定义<code>dp[i]</code>表示节点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>为父节点的【所有孩子节点为根】的最大子树节点个数。</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	sz[u] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u);</span><br><span class="line">		sz[u] += sz[v];</span><br><span class="line">		dp[u] = max(dp[u], sz[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	dp[u] = max(dp[u], n - sz[u]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<details>
+	<summary>在吗，看看代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	sz[u] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].to;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u);</span><br><span class="line">		sz[u] += sz[v];</span><br><span class="line">		dp[u] = max(dp[u], sz[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	dp[u] = max(dp[u], n - sz[u]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
 <h2><span id="树的直径"> 树的直径</span></h2>
 <p><strong>定义：</strong> 树中所有最短路径距离的最大值即为树的直径</p>
 <p>什么是距离？对于一棵带边权的树，距离就是边权；反之没有边权的树，相连接的两点的距离就默认为1。</p>
@@ -641,33 +640,71 @@
 <img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十-树的直径.jpg" width="30%">
 </center>
 <p><strong>算法：</strong> 选择任意一点开始DFS，找到离这个点最远的点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>；再从点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>开始DFS，找到离点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>最远的点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>。最后点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>到点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>的距离就是这棵树的直径。</p>
+<details>
+	<summary>出来给我看下代码</summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa, <span class="keyword">int</span> dis)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (dis &gt; ans) ans = dis, k = u;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].c, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u, dis + w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
 <h2><span id="树的中心"> 树的中心</span></h2>
 <p><strong>定义：</strong> 以树的中心为整棵树的根时，从该根到每个叶子节点的最长路径最短。<strong>区别于树的重心【<font color="red">重心下的最大子树节点数最小</font>】。</strong></p>
 <h3><span id="算法一直径上暴力"> 算法一：直径上暴力</span></h3>
 <p>根据定义，<s>废话，</s> 树的中心一定在树的直径上，所以在找到直径的两端点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mi mathvariant="normal">、</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x、y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>之后，离这两端点的<strong>最远距离最小</strong>【有点不说人话，总之就应该是最近的】的就是中心。</p>
+<details>
+	<summary>在，代码，懂？</summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我是代码：</span></span><br><span class="line">······略</span><br></pre></td></tr></table></figure>
+</details>
 <h3><span id="算法二树形dp"> 算法二：树形DP</span></h3>
 <p><strong>求什么？</strong></p>
 <ul>
 <li>树的中心，最长距离最小。</li>
 <li>那就定义<code>dp[u]</code>表示到节点u的最长距离。</li>
 </ul>
-<center>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的直径.jpg" width="20%">
-</center>
 <p><strong>怎么求？</strong></p>
-<p>要想完成状态转移，势必需要遍历这棵树。</p>
+<p>要想完成状态转移，势必需要通过DFS遍历这棵树。</p>
 <details>
     <summary>先看看DFS的特点</summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i == <span class="number">10</span>) <span class="keyword">return</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">	DFS(i + <span class="number">1</span>);</span><br><span class="line"><span class="comment">//	printf(&quot;%d\n&quot;, i);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	DFS(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </details>
-<p>比如，想求某子树的根节点在树中的追远距离。那根节点的距离状态，就应该由孩子节点的距离转移获得。因此应该先递归，搞清楚孩子节点的距离，再来计算根节点的距离。</p>
+<p>如果把握好递归函数里的语句顺序，我们可以实现【把孩子节点的信息传递给父节点】，或是【把父节点的信息传递给孩子节点】。<br>
+<strong>但是，这两步操作不能写在同一个函数里。</strong><img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/疑惑.jpg" width="3%"></p>
+<blockquote>
+<p>孩子节点的信息收集好了才能正确传递给父节点吧？<br>
+父节点的信息收集好了才能正确传递给孩子节点吧？</p>
+</blockquote>
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的中心.jpg" width="20%" border="30">
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/点头.jpg" width="30%">
+</center>
+<details>
+	<summary>求某根节点在子树中的最长距离</summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v  = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u);</span><br><span class="line">		dp[u] = max(dp[u], dp[v] + w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<details>
+	<summary>利用刚计算好的dp向上更新</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		不是，这咋更新啊？</span><br><span class="line">		DFS(v, u);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<blockquote>
 <ul>
-<li>但是，一个节点到其他节点的距离，不止局限在子树内，</li>
+<li>假设我们已经求出全部子树中，根节点的最长距离。然后利用这一信息，向上更新。</li>
+<li>整棵树剔除红色部分之后，根节点在子树中的最长距离信息，可以用来更新红节点向上的最长距离</li>
 </ul>
-
+</blockquote>
+<p>于是又多了一个问题，好好的一棵树，我要怎么忽略某个部分。</p>
+<blockquote>
+<p>一个父节点的众多孩子节点中，对于孩子节点V，其实只有两种关系，是V本身，非V节点。</p>
+</blockquote>
+<p>所以我们在计算某根节点在子树中的最长距离时，顺便就求一下次长距离就好了。<br>
+在跟新某孩子节点向上的最长距离时，判断孩子节点的位置，然后选择最长距离或者次长距离即可。</p>
+<details>
+	<summary>直接上代码不行么</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fir = <span class="number">0</span>, sec = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		dfs(v, u);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = dp[v][<span class="number">0</span>] + w;</span><br><span class="line">		<span class="keyword">if</span> (c &gt; fir) sec = fir, fir = c;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (c &gt; sec) sec = c;</span><br><span class="line">	&#125;</span><br><span class="line">	dp[u][<span class="number">0</span>] = fir;</span><br><span class="line">	dp[u][<span class="number">1</span>] = sec;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">if</span> (dp[u][<span class="number">0</span>] == dp[v][<span class="number">0</span>] + w) dp[v][<span class="number">2</span>] = max(dp[u][<span class="number">1</span>], dp[u][<span class="number">2</span>]) + w;</span><br><span class="line">		<span class="keyword">else</span> dp[v][<span class="number">2</span>] = max(dp[u][<span class="number">0</span>], dp[u][<span class="number">2</span>]) + w;</span><br><span class="line">		</span><br><span class="line">		DFS(v, u);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/抽烟.gif">
+</center>
+<details>
+	<summary>结尾总结</summary>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/原来是这样.jpg">
+</details>
       
     </div>
     
@@ -712,31 +749,6 @@
     <script>
         yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"树形相关　| lllllan的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
 
 
 
