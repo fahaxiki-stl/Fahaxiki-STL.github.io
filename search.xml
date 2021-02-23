@@ -229,29 +229,29 @@
   <entry>
     <title>first blog / 博客初建起</title>
     <url>/2021/02/22/first-blog/</url>
-    <content><![CDATA[<p><sub>折腾了一个上午，才算是搭建了一个简陋的个人博客。<br />
+    <content><![CDATA[<p><sub>折腾了一个上午，才算是搭建了一个简陋的个人博客。<br>
 为了防止过两天连自己的博客都更新不了的意外发生，这里<s>记录</s>搬运一些hexo的指令。Orz</sub></p>
 <p>小白第一步，win+r，打开cmd。<s>到目录D/blog/下开始。</s> 这是我自己的文件位置。</p>
 <span id="more"></span>
-<h1 id="yelee主题使用说明"><a class="markdownIt-Anchor" href="#yelee主题使用说明"></a> <a href="http://moxfive.xyz/yelee/">Yelee主题使用说明</a></h1>
-<h1 id="新建一篇文章"><a class="markdownIt-Anchor" href="#新建一篇文章"></a> 新建一篇文章</h1>
+<h1><span id="yelee主题使用说明"> </span></h1>
+<h1><span id="新建一篇文章"> 新建一篇文章</span></h1>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;博客名&quot;</span><br></pre></td></tr></table></figure>
 <p>引号中当然是你希望新建的文章的标题了，然后就会在/source/_posts/目录下为你新建一个同名的md文件。</p>
 <p>新建文章模板</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http:&#x2F;&#x2F;domain.com&#x2F;awesome.mp3</span><br><span class="line">cover: http:&#x2F;&#x2F;domain.com&#x2F;awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h1 id="开始写博客"><a class="markdownIt-Anchor" href="#开始写博客"></a> 开始写博客</h1>
+<h1><span id="开始写博客"> 开始写博客</span></h1>
 <p>有vim或者notepad的，可以直接用命令语句打开，形如</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim 博客名.md</span><br><span class="line">notepad 博客名.md</span><br></pre></td></tr></table></figure>
-<p>其实没有这两个软件也没关系，txt下写也是一样的【/doge】。反正根据自己的喜好和需求，有一个能过比较顺手地写markdown的软件即可，然后根据/source/_posts/目录找到该文章然后进行编写即可。</p>
-<h1 id="文章写好部署网站"><a class="markdownIt-Anchor" href="#文章写好部署网站"></a> 文章写好部署网站</h1>
+<p>其实没有这两个软件也没关系，记事本写也是一样的/doge。反正根据自己的喜好和需求，有一个能过比较顺手地写markdown的软件即可，然后根据/source/_posts/目录找到该文章然后进行编写即可。</p>
+<h1><span id="文章写好部署网站"> 文章写好部署网站</span></h1>
 <p>生成静态文件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>部署网站</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1 id="清除缓存文件"><a class="markdownIt-Anchor" href="#清除缓存文件"></a> 清除缓存文件</h1>
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br />
+<h1><span id="清除缓存文件"> 清除缓存文件</span></h1>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>
 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
@@ -306,7 +306,9 @@
 <li>每一个非根结点有且只有一个父结点；</li>
 <li>除了根结点外，每个子结点可以分为多个不相交的子树</li>
 </ul>
+<center>
 <img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图一-树.jpg" width="60%" div align="center">
+</center>
 <h2><span id="树的种类"> 树的种类</span></h2>
 <ul>
 <li>无序树：树中任意节点的子结点之间没有顺序关系，这种树称为无序树,也称为自由树【说人话就是一棵还没有确定谁是根的树，再说的直白点就是一个没有回路的连通图】</li>
@@ -321,7 +323,9 @@
 <li><strong>完全二叉树</strong>：如果对满二叉树的结点进行编号, 约定编号从根结点起, 自上而下, 自左而右。则深度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>的, 有n个结点的二叉树, 当且仅当其每一个结点都与深度为k的满二叉树中编号从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi mathvariant="normal">至</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">1至n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord cjk_fallback">至</span><span class="mord mathdefault">n</span></span></span></span>的结点一一对应时, 称之为完全二叉树。【说人话呢就是一棵树抛开最后一层不看，剩余部分满足一颗满二叉树的定义；并且最后一层的节点是从左到右紧密排好的】</li>
 <li>哈夫曼树（最优二叉树）：带权路径最短的二叉树称为哈夫曼树或最优二叉树</li>
 </ul>
+<center>
 <img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图二-二叉树.jpg" width="60%" div align="center">
+</center>
 <h2><span id="相关术语"> 相关术语</span></h2>
 <ul>
 <li><strong>结点</strong>：包含一个数据元素及若干指向子树分支的信息</li>
@@ -333,13 +337,18 @@
 <li><strong>树的深度</strong>：也称为树的高度，树中所有结点的层次最大值称为树的深度</li>
 <li><strong>权值：</strong> 边权、点权</li>
 </ul>
+<center>
 <img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图三-相关术语.jpg" width="50%" height="30%">
+</center>
 <h2><span id="二叉树的遍历"> 二叉树的遍历</span></h2>
 <p>  前、中、后 三序遍历，针对的是根节点的位置。根-左-右即前序遍历【所谓先遍历根节点，所以是前序】；左-根-右即中序遍历；左-右-根即后序遍历；而层序遍历则是按层数从低到高，从左到右的顺序遍历。</p>
+<center>
 <img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图四-二叉树的遍历.jpg" width="50%">
-<div style="page-break-after: always;"></div>
-<p>哦，还有一般的树的遍历：</p>
+</center>
+<details>
+    <summary>哦，还有一般的树的遍历：</summary>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e4</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cnt, head[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span> <span class="keyword">int</span> v, w, next; &#125; e[maxn &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span> </span>&#123; e[++cnt] = &#123;v, w, head[u]&#125;; head[u] = cnt; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d -(%d)-&gt; %d\n&quot;</span>, u, w, v);</span><br><span class="line">		DFS(v, u);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> u, v, w; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;u, &amp;v, &amp;w);</span><br><span class="line">		add(u, v, w); add(v, u, w);</span><br><span class="line">	&#125;</span><br><span class="line">	DFS(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span> <span class="keyword">int</span> v, w; &#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt; G[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G[u].size(); ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = G[u][i].v, w = G[u][i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d -(%d)-&gt; %d\n&quot;</span>, u, w, v);</span><br><span class="line">		DFS(v, u);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> u, v, w; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;u, &amp;v, &amp;w);</span><br><span class="line">		G[u].push_back(&#123;v, w&#125;);</span><br><span class="line">		G[v].push_back(&#123;u, w&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	DFS(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">1 2 1</span></span><br><span class="line"><span class="comment">1 3 1</span></span><br><span class="line"><span class="comment">2 4 1</span></span><br><span class="line"><span class="comment">2 5 1</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</details>
 <h1><span id="树形相关的回顾"> 【树形相关】的回顾</span></h1>
 <h2><span id="线段树"> 线段树</span></h2>
 <p>  线段树是一种二叉搜索树，与区间树相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。</p>
@@ -349,7 +358,9 @@
 <li>区间修改</li>
 <li>区间查询</li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图五-线段树.jpg">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图五-线段树.jpg" width="50%">
+</center>
 <h2><span id="最小生成树"> 最小生成树</span></h2>
 <p>  一个有 n 个结点的连通图的生成树是原图的极小连通子图，且包含原图中的所有 n 个结点，并且有保持图连通的最少的边。</p>
 <ul>
@@ -357,14 +368,15 @@
 <li>Kruskal算法</li>
 <li>次小生成树</li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图六-最小生成树.jpg">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图六-最小生成树.jpg" width="50%">
+</center>
 <h2><span id="最近公共祖先"> 最近公共祖先</span></h2>
 <p>  对于有根树T的两个结点u、v，最近公共祖先LCA(T,u,v)表示一个结点x，满足x是u和v的祖先且x的深度尽可能大。在这里，一个节点也可以是它自己的祖先。</p>
 <ul>
 <li>在线倍增【略】</li>
 <li>离线Tarjan【略】</li>
 </ul>
-<div style="page-break-after: always;"></div>
 <h1><span id="今天的学习"> 今天的学习</span></h1>
 <h2><span id="树上差分"> 树上差分</span></h2>
 <p>  就是在树上进行差分，以起到优化复杂度的目的。主要作用是对树上的路径进行修改和查询操作，在<strong>修改多、查询少</strong>的情况下复杂度比较优秀。实际上，树上差分能够实现的操作，用<strong>线段树、树剖、LCT等等</strong>也可以实现，但它的优势在于实现简单，可以避免在考场上出现写题五分钟、调试两小时的情况</p>
@@ -518,17 +530,20 @@
 <li>对节点u到节点v路径上的所有节点的权值+c<br>
 <code>w[u]+=c, w[v]+=c, w[lca&#123;u,v&#125;]-=c, w[fa[lca&#123;u,v&#125;]]-=c;</code></li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图七-点的差分.jpg" width="70%">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图七-点的差分.jpg" width="50%">
+</center>
 <p><strong>边的差分</strong></p>
 <ul>
 <li>【假设u是v的父节点】将u与v边上的权值记到点v上</li>
 <li>对节点u到节点v路径上所有的边的权值+c<br>
 <code>w[u]+=c, w[v]+=c, w[lca&#123;u,v&#125;]-=2*c;</code></li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图八-边的差分.jpg" width="70%">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图八-边的差分.jpg" width="50%">
+</center>
 <h2><span id="树的重心"> 树的重心</span></h2>
-<p><strong>定义：</strong><br>
-  树的重心也叫树的质心。对于一棵树n个节点的无根树，找到一个点，其<font color="red">所有的子树中最大的子树节点数最少</font>，那么这个点就是这棵树的重心</p>
+<p><strong>定义：</strong> 树的重心也叫树的质心。对于一棵树n个节点的无根树，找到一个点，其<font color="red">所有的子树中最大的子树节点数最少</font>，那么这个点就是这棵树的重心</p>
 <p><strong>性质：</strong></p>
 <ul>
 <li>树中所有点到某个点的距离和中，到重心的距离和是最小的，如果有两个重心，他们的距离和一样。</li>
@@ -547,7 +562,9 @@
 <li>『枚举每个节点作为根节点』不可以也没必要，<s>那只是我陈述理论的时候方便理解而已。</s> 实际算法过程只需要假设一个节点作为根节点，<s>然后随便DFS一下就可以了。</s></li>
 <li>DFS过程中去计算子树节点个数的时候，某一节点的孩子节点应该还包括它的【父节点】。听上去有些自相矛盾，但因为一开始的时候也只是随便假设了一个根节点，算是一个假根，所以一个节点的父节点也算得上是这个节点的【潜在孩子节点】。</li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图九-求树的重心.jpg" width="40%">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图九-求树的重心.jpg" width="30%">
+</center>
 <ul>
 <li>定义<code>sz[i]</code>表示节点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>为根的子树的节点个数。</li>
 <li>定义<code>dp[i]</code>表示节点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>为父节点的【所有孩子节点为根】的最大子树节点个数。</li>
@@ -556,28 +573,32 @@
 <h2><span id="树的直径"> 树的直径</span></h2>
 <p><strong>定义：</strong> 树中所有最短路径距离的最大值即为树的直径</p>
 <p>什么是距离？对于一棵带边权的树，距离就是边权；反之没有边权的树，相连接的两点的距离就默认为1。</p>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十-树的直径.jpg" width="50%" height="50%">
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十-树的直径.jpg" width="30%">
+</center>
 <p><strong>算法：</strong> 选择任意一点开始DFS，找到离这个点最远的点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>；再从点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>开始DFS，找到离点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>最远的点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>。最后点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>到点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>的距离就是这棵树的直径。</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa, <span class="keyword">int</span> dis)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (dis &gt; ans) ans = dis, k = u;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = e[i].c, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u, dis + w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2><span id="树的中心"> 树的中心</span></h2>
 <p><strong>定义：</strong> 以树的中心为整棵树的根时，从该根到每个叶子节点的最长路径最短。<strong>区别于树的重心【<font color="red">重心下的最大子树节点数最小</font>】。</strong></p>
-<p>【<strong>算法一：</strong>】根据定义，<s>废话，</s> 树的中心一定在树的直径上，所以在找到直径的两端点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mi mathvariant="normal">、</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x、y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>之后，离这两端点的<strong>最远距离最小</strong>【有点不说人话，总之就应该是最近的】的就是中心。</p>
+<h3><span id="算法一直径上暴力"> 算法一：直径上暴力</span></h3>
+<p>根据定义，<s>废话，</s> 树的中心一定在树的直径上，所以在找到直径的两端点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mi mathvariant="normal">、</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x、y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>之后，离这两端点的<strong>最远距离最小</strong>【有点不说人话，总之就应该是最近的】的就是中心。</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 我是代码：</span></span><br><span class="line">······略</span><br></pre></td></tr></table></figure>
-<p>【<strong>算法二：树形DP</strong>】</p>
+<h3><span id="算法二树形dp"> 算法二：树形DP</span></h3>
 <p><strong>求什么？</strong></p>
 <ul>
 <li>树的中心，最长距离最小。</li>
-<li>那就定义<code>dp[u][]</code>表示到节点u的最长距离。</li>
+<li>那就定义<code>dp[u]</code>表示到节点u的最长距离。</li>
 </ul>
-<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的直径.jpg" width="30%">
-<p><strong>先看DFS的结构</strong></p>
-<ul>
-<li>递归函数中的顺序很重要</li>
-</ul>
+<center>
+<img src="/2021/02/23/%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/图十一-求树的直径.jpg" width="20%">
+</center>
+<p><strong>怎么求？</strong></p>
+<p>要想完成状态转移，势必需要遍历这棵树。</p>
+<details>
+    <summary>先看看DFS的特点</summary>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i == <span class="number">10</span>) <span class="keyword">return</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">	DFS(i + <span class="number">1</span>);</span><br><span class="line"><span class="comment">//	printf(&quot;%d\n&quot;, i);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	DFS(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>比如，想求某子树的根节点在树中的追远距离。那根节点的距离状态，就应该由孩子节点的距离转移获得。因此应该先递归，搞清楚孩子节点的距离，再来计算根节点的距离。</li>
-</ul>
+</details>
+<p>比如，想求某子树的根节点在树中的追远距离。那根节点的距离状态，就应该由孩子节点的距离转移获得。因此应该先递归，搞清楚孩子节点的距离，再来计算根节点的距离。</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span> <span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">		<span class="keyword">int</span> v  = e[i].v, w = e[i].w;</span><br><span class="line">		<span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line">		DFS(v, u);</span><br><span class="line">		dp[u] = max(dp[u], dp[v] + w);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>但是，一个节点到其他节点的距离，不止局限在子树内，</li>
