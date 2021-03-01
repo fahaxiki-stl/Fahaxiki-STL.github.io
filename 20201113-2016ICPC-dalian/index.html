@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="lllllan" />
+
+
+
+<meta name="description" content="solved A B C D E F G H I J K     7 &#x2F; 11 O · Ø O · Ø ! O O O ·     O：比赛时通过 Ø：赛后通过 !：比赛时尝试了未通过 ·：比赛时未尝试  比赛链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016 ACM-ICPC, Asia Dalian Regional">
+<meta property="og:url" content="https://fahaxiki-stl.github.io/20201113-2016ICPC-dalian/index.html">
+<meta property="og:site_name" content="Fahaxiki!的博客">
+<meta property="og:description" content="solved A B C D E F G H I J K     7 &#x2F; 11 O · Ø O · Ø ! O O O ·     O：比赛时通过 Ø：赛后通过 !：比赛时尝试了未通过 ·：比赛时未尝试  比赛链接">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-11-13T14:07:06.000Z">
+<meta property="article:modified_time" content="2021-03-01T14:15:39.055Z">
+<meta property="article:author" content="lllllan">
+<meta property="article:tag" content="博弈论">
+<meta property="article:tag" content="威佐夫博弈">
+<meta property="article:tag" content="二分图染色">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Fahaxiki!的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-bounce.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>2016 ACM-ICPC, Asia Dalian Regional | Fahaxiki!的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/tags/">文章分类</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" rel="noopener" href="https://github.com/lllllan-0424" title="GitHub"></a>
+                            
+                                <a class="fa 博客园" target="_blank" rel="noopener" href="https://www.cnblogs.com/0424lrn/" title="博客园"></a>
+                            
+                                <a class="fa CSDN" target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46187157" title="CSDN"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/01%E5%AD%97%E5%85%B8%E6%A0%91/" rel="tag">01字典树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS%E5%BA%8F/" rel="tag">DFS序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dijkstra/" rel="tag">Dijkstra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Floyd/" rel="tag">Floyd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCA/" rel="tag">LCA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multiset/" rel="tag">multiset</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unordered-map/" rel="tag">unordered_map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%89%E5%88%86/" rel="tag">三分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/" rel="tag">主席树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86/" rel="tag">二分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" rel="tag">二分图匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9F%93%E8%89%B2/" rel="tag">二分图染色</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%A0%E4%BD%95/" rel="tag">几何</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="tag">前缀和</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="tag">博弈论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%95%B4%E6%95%B0/" rel="tag">大整数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A8%81%E4%BD%90%E5%A4%AB%E5%8D%9A%E5%BC%88/" rel="tag">威佐夫博弈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="tag">字典树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/" rel="tag">完全背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%A9%E5%B1%95%E5%8D%A2%E5%8D%A1%E6%96%AF/" rel="tag">扩展卢卡斯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%A4%A7%E6%9D%83%E5%8C%B9%E9%85%8D/" rel="tag">最大权匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%A4%A7%E7%94%9F%E6%88%90%E6%A0%91/" rel="tag">最大生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96/" rel="tag">最小点覆盖</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="tag">最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%84%E9%80%A0/" rel="tag">构造</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E4%B8%8A%E5%B7%AE%E5%88%86/" rel="tag">树上差分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E5%BD%A2DP/" rel="tag">树形DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" rel="tag">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/" rel="tag">模拟退火</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/" rel="tag">欧拉回路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E5%8E%8BDP/" rel="tag">状压DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/" rel="tag">状态压缩</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag">线段树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" rel="tag">记忆化搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" rel="tag">边双连通分量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/" rel="tag">随机数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A9%AC%E6%8B%89%E8%BD%A6/" rel="tag">马拉车</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/" rel="tag">高精度</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_47900150">好哥哥-Tryna</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://blog.csdn.net/ssteelxd">好哥哥-Sstee1XD</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://blog.csdn.net/bloom_er">好哥哥-lanChe</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://blog.csdn.net/Hc_Soap">好哥哥-岛上的黄鸡</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">盛意以江河，江河不及你</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/tags/">文章分类</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/lllllan-0424" title="GitHub"></a>
+                            
+                                <a class="fa 博客园" target="_blank" href="https://www.cnblogs.com/0424lrn/" title="博客园"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/m0_46187157" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-20201113-2016ICPC-dalian" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20201113-2016ICPC-dalian/" class="article-date">
+      <time datetime="2020-11-13T14:07:06.000Z" itemprop="datePublished">2020-11-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2016 ACM-ICPC, Asia Dalian Regional
+    </h1>
+  
+
+          
+          
+          <div style="margin-top:10px 0;margin-bottom:40px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.1k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10分</span>
+      </span>
+    </span>
+</div>
+
+          
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E8%AE%AD%E7%BB%83%E9%A2%98%E8%A7%A3/">训练题解</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9F%93%E8%89%B2/" rel="tag">二分图染色</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="tag">博弈论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A8%81%E4%BD%90%E5%A4%AB%E5%8D%9A%E5%BC%88/" rel="tag">威佐夫博弈</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <table>
+<thead>
+<tr>
+<th style="text-align:center">solved</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
+<th style="text-align:center">E</th>
+<th style="text-align:center">F</th>
+<th style="text-align:center">G</th>
+<th style="text-align:center">H</th>
+<th style="text-align:center">I</th>
+<th style="text-align:center">J</th>
+<th style="text-align:center">K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">7 / 11</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">·</td>
+<td style="text-align:center">Ø</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">·</td>
+<td style="text-align:center">Ø</td>
+<td style="text-align:center">!</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">·</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>O：比赛时通过</li>
+<li>Ø：赛后通过</li>
+<li>!：比赛时尝试了未通过</li>
+<li>·：比赛时未尝试</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/search.php?field=problem&amp;key=2016ACM%2FICPC%D1%C7%D6%DE%C7%F8%B4%F3%C1%AC%D5%BE-%D6%D8%CF%D6%C8%FC%A3%A8%B8%D0%D0%BB%B4%F3%C1%AC%BA%A3%CA%C2%B4%F3%D1%A7%A3%A9&amp;source=1&amp;searchmode=source">比赛链接</a></p>
+<span id="more"></span>
+<h2><span id="a-wrestling-match"> A - Wrestling Match</span></h2>
+<p>sloved by Sstee1XD. 0:55(+3)</p>
+<p><strong>题意</strong>：有n个选手构成对抗关系，每组对抗关系会分出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>o</mi><mi>o</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">good</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">bad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span></span></span></span>两种选手。现在已知几个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>o</mi><mi>o</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">good</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span></span></span></span>选手和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">bad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span></span></span></span>选手，问你是否能把所有选手准确地分成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>o</mi><mi>o</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">good</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">bad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span></span></span></span>两类选手。</p>
+<p><strong>题解</strong> ：我们从已经分出来的选手出发，对其进行染色。注意有些选手和其他选手是没有对抗关系的，对于这些选手要判断下是否已经提前分好类。<br>
+（由于现场代码写得过于丑陋，甚至wa了三发，所以没交现场代码QAQ</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, x, y;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[maxn];</span><br><span class="line"><span class="keyword">int</span> cor[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    cor[u] = c;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> v : G[u]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cor[v] == c) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (!cor[v] &amp;&amp; !dfs(v, -c)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) G[i].clear();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u, v; i &lt;= m; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;u, &amp;v);</span><br><span class="line">		G[u].push_back(v);</span><br><span class="line">		G[v].push_back(u);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">memset</span>(cor, <span class="number">0</span>, <span class="keyword">sizeof</span>(cor));</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u; i &lt;= x; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;u);</span><br><span class="line">		cor[u] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u; i &lt;= y; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;u);</span><br><span class="line">		cor[u] = <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (cor[i] &amp;&amp; !dfs(i, cor[i]) || !cor[i] &amp;&amp; !G[i].size()) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!cor[i] &amp;&amp; !dfs(i, <span class="number">1</span>) &amp;&amp; !dfs(i, <span class="number">-1</span>)) &#123;</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;n, &amp;m, &amp;x, &amp;y)) run();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="c-game-of-taking-stones"> C - Game of Taking Stones</span></h2>
+<p>Solved by Sstee1XD. (-)</p>
+<p><strong>题解：</strong> 大数威佐夫博弈，我们采用<code>java</code>高精度来写。求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mn>5</mn></msqrt><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sqrt{5} + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.13278em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>时采用二分来求，注意要求到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>直接差值要到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>1</mn><mrow><mo>−</mo><mn>100</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1^{-100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>级别，大概要二分<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>300</mn></mrow><annotation encoding="application/x-tex">300</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span><span class="mord">0</span></span></span></span>多次，这里直接二分<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>500</mn></mrow><annotation encoding="application/x-tex">500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span>次。</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> BigDecimal n, m;</span><br><span class="line">	<span class="keyword">static</span> BigDecimal two = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">	<span class="keyword">static</span> BigDecimal five = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;5&quot;</span>);</span><br><span class="line">	<span class="keyword">static</span> BigDecimal c = init().divide(two);</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span> (in.hasNext()) &#123;</span><br><span class="line">			n = <span class="keyword">new</span> BigDecimal(in.next());</span><br><span class="line">			m = <span class="keyword">new</span> BigDecimal(in.next());</span><br><span class="line">			<span class="keyword">if</span> (n.compareTo(m) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">				BigDecimal tmp;</span><br><span class="line">				tmp = n;</span><br><span class="line">				n = m;</span><br><span class="line">				m = tmp;</span><br><span class="line">			&#125;</span><br><span class="line">			n = n.subtract(m).multiply(c);</span><br><span class="line">			n = n.setScale(<span class="number">0</span>, BigDecimal.ROUND_DOWN);</span><br><span class="line">			<span class="keyword">if</span> (n.equals(m) == <span class="keyword">true</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">static</span> BigDecimal <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		BigDecimal l = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">		BigDecimal r = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">		BigDecimal mid = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">500</span>; ++i) &#123;</span><br><span class="line">			mid = l.add(r).divide(two);</span><br><span class="line">			<span class="keyword">if</span> (mid.multiply(mid).compareTo(five) &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">				l = mid;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> r = mid;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mid.add(<span class="keyword">new</span> BigDecimal(<span class="string">&quot;1&quot;</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="d-a-simple-math-problem"> D - A Simple Math Problem</span></h2>
+<p>solved by Tryna. 2:57(+1)</p>
+<p><strong>题意：</strong> 给出a和b，找到了一组x和y，满足<code>x + y = a</code>和<code>LCM(x,y) = b</code>如果没有就输出 <strong>No Solution</strong></p>
+<p><strong>题解：</strong> 首先我们需要知道这样一个结论，如果<code>i，j</code>是互质的，那么<code>i + j 和 i*j</code>也是互质的。已知<code>x + y = a</code> 和 <code>LCM(x, y) = b</code>，变形为<code>x * y / gcd(x,y) = b</code>，设<code>gcd(x,y) = k</code>，<code>x = k * i</code>，<code>y = k * j</code>所以得到了<code>k * (i + j) = a</code>和<code>k*i*j = b</code>,因为<code>i，j</code>互质,所以<code>i + j, i * j</code>互质，所以<code>gcd(a,b) = k = gcd(x,y)</code>。知道了这个就很好写了，我们有两个方程，分别是<code>x + y = a 和 x * y = k * b</code>,我们采用代入消元法消去y，就得到了<code>x^2 - a*x + k*b = 0</code>,然后就采用求根公式求解，求出来的解也必须要满足<code>x + y = a</code>和<code>LCM(x,y) = b</code>，这里没考虑周到白给了一发。</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">gcd</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a, <span class="keyword">long</span> <span class="keyword">long</span> b)</span> </span>&#123;	<span class="keyword">return</span> a == <span class="number">0</span> ? b : gcd(b%a, a);&#125;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">lcm</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a, <span class="keyword">long</span> <span class="keyword">long</span> b)</span> </span>&#123; <span class="keyword">return</span> a * b / gcd(a, b);&#125;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a, b;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">&quot;%lld %lld&quot;</span>, &amp;a, &amp;b))&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> k = gcd(a, b);</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> deta = a * a - <span class="number">4</span> * b * k;</span><br><span class="line">		<span class="keyword">if</span>(deta &lt; <span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">&quot;No Solution&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> x1 = (a - <span class="built_in">sqrt</span>(deta)) / (<span class="keyword">long</span> <span class="keyword">long</span>)<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">long</span> <span class="keyword">long</span> x2 = (a + <span class="built_in">sqrt</span>(deta)) / (<span class="keyword">long</span> <span class="keyword">long</span>)<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span>(x1 + x2 != a) <span class="built_in">puts</span>(<span class="string">&quot;No Solution&quot;</span>);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(lcm(x1, x2) != b) <span class="built_in">puts</span>(<span class="string">&quot;No Solution&quot;</span>);</span><br><span class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld\n&quot;</span>, x1, x2);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="f-detachment"> F - Detachment</span></h2>
+<p>solved by Tryna. (-)</p>
+<p><strong>题意：</strong> 给出一个数，将它拆分成若干个数的和，并且这些数不能重复，求这若干个数的积的最大值</p>
+<p><strong>题解：</strong> 通过枚举前面的一些数我们不难发现此题的贪心策略，首先1肯定不能取，因为1对积没有贡献，并且还占用和。贪心策略是从2开始连续的数字相乘，比如， 9最优的情况就是<code>2 * 3 * 4</code>，14最优的情况就是<code>2 * 3 * 4 * 5</code>，但并不是所有数字都能凑出这样的形式，那么对于9到14之间的数字我们这样处理，比如说11，它比9大2，我们就从后往前每个数字加1，就得到了<code>2 * 4 * 5</code>这样的最优情况。想出贪心策略的时候我就冲了一发，结果毫无疑问TLE了。赛后看了大佬们的博客，用了 <strong>前缀和 + 前缀积 + 逆元</strong> 优化。分两种情况，第一种情况 比如<code>2 * 3 * 4 * 5</code> 余5和最后一个数相等， <code>3 * 4 * 5 * 7</code> 就是每个数都加一遍，然后给最后一个数在加1， 就是 <strong>5的阶乘除以2 乘上（p + 2）</strong>（p是最后一个数）； 第二种情况 比如 <code>2 * 3 * 4 * 5</code> 余2，那就从后往前每个数加1，直到加完 <code>2 * 3 * 5 * 6</code>， 总结就是 <strong>3的阶乘 乘上 6的阶乘 除 4的阶乘</strong> 因为有除法，所以我们需要把除法转化成乘法逆元。</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5e4</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mul[maxn], sum[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    mul[<span class="number">1</span>] = <span class="number">1</span>;  </span><br><span class="line">    sum[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= maxn; i++)&#123;</span><br><span class="line">        sum[i] = sum[i<span class="number">-1</span>] + i;</span><br><span class="line">        mul[i] = (i*mul[i<span class="number">-1</span>]) % Mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ans = (ans*a) % Mod;</span><br><span class="line">        a = (a*a) % Mod;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> t, x;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">        <span class="keyword">if</span>(x == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">2</span>, r = maxn, mid, p;</span><br><span class="line">        <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">            mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(sum[mid] &lt;= x)&#123;</span><br><span class="line">                p = mid;</span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = x - sum[p];</span><br><span class="line">        ll ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(num == p) ans = (mul[p] * inv(<span class="number">2</span>, Mod - <span class="number">2</span>) % Mod * (p + <span class="number">2</span>) % Mod) % Mod;</span><br><span class="line">        <span class="keyword">else</span> ans = (mul[p + <span class="number">1</span>] * inv(mul[p - num + <span class="number">1</span>], Mod - <span class="number">2</span>) % Mod * mul[p - num] % Mod) % Mod;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="h-to-begin-or-not-to-begin"> H - To begin or not to begin</span></h2>
+<p>solved by lllllan. 01:19(+1)</p>
+<p><strong>题意：</strong> k 个黑球和1个红球，两个轮流抽，抽到红球算赢，问先手赢的概率大还是后手大，还是概率相等？</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k))&#123;</span><br><span class="line">		<span class="keyword">if</span>(k % <span class="number">2</span>) <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="i-convex"> I - Convex</span></h2>
+<p>solverd by Tryna. 0:29(+1)</p>
+<p><strong>题意：</strong> 一个圆上有n个点，每个点和原点相连，给出他们的角度，求这个图形的面积。</p>
+<p><strong>题解：</strong> 每部分都是个三角形，用三角形面积公式就结束了。写太快了导致写呲了，白给一发。 <code>S = 1/2 * a * b * sin(angle)</code></p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="built_in">acos</span>(<span class="number">-1.0</span>);</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">double</span> d, angle, sum;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">&quot;%d %lf&quot;</span>, &amp;n, &amp;d))&#123;</span><br><span class="line">		sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;angle);</span><br><span class="line">			angle = angle * (pi / <span class="number">180</span>);</span><br><span class="line">			sum += d * d / <span class="number">2.0</span> * (<span class="built_in">sin</span>(angle));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%.3f\n&quot;</span>, sum);</span><br><span class="line">	&#125;	</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2><span id="j-find-small-a"> J - Find Small A</span></h2>
+<p>solved by lllllan. 02:59(+7)【通过7次尝试才能读懂题意是真的没谁了】</p>
+<p><strong>题意：</strong> 给N个数 每个数都可以拆开成一个32位的2进制 每八位一个字节  每个字节的2进制数换算成十进制的看有多少个97</p>
+<details>
+    <summary>AC代码</summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k;</span><br><span class="line">ll a;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>, &amp;a);</span><br><span class="line">		<span class="keyword">while</span>(a)&#123;</span><br><span class="line">			<span class="keyword">if</span>(a % <span class="number">256</span> == <span class="number">97</span>) sum++;</span><br><span class="line">			a &gt;&gt;= <span class="number">8</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/20201121-2018ICPC-nanjing/">
+                    2018 ACM-ICPC, Asia Nanjing Regional
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/20201105-2015ICPC-changchun/">
+                    2015 ACM/ICPC, Asia Changchun Regional
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> A - Wrestling Match</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> C - Game of Taking Stones</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> D - A Simple Math Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> F - Detachment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> H - To begin or not to begin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> I - Convex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> J - Find Small A</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/20201121-2018ICPC-nanjing/" title="上一篇: 2018 ACM-ICPC, Asia Nanjing Regional">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/20201105-2015ICPC-changchun/" title="下一篇: 2015 ACM/ICPC, Asia Changchun Regional">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/20210225-2013NWERC/">2013-2014 Northwestern European Regional Contest (NWERC 2013)</a></li><li class="post-list-item"><a class="post-list-link" href="/20210224-%E6%A0%91%E5%BD%A2%E7%BB%83%E4%B9%A0%E5%8F%8A%E9%A2%98%E8%A7%A3/">树形练习及题解</a></li><li class="post-list-item"><a class="post-list-link" href="/20210224-2017CCPC%E7%BD%91%E7%BB%9C%E8%B5%9B/">2017CCPC网络赛</a></li><li class="post-list-item"><a class="post-list-link" href="/20210223-%E6%A0%91%E5%BD%A2%E7%9B%B8%E5%85%B3/">树形相关</a></li><li class="post-list-item"><a class="post-list-link" href="/20210223-hexo%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E9%97%B4%E8%B7%B3%E8%BD%AC/">hexo实现文章间跳转</a></li><li class="post-list-item"><a class="post-list-link" href="/20210223-first-blog/">first blog / 博客初建起</a></li><li class="post-list-item"><a class="post-list-link" href="/20210221-2018GCPC-German/">2021 HZNU Winter Training Day 17(2018 German Collegiate Programming Contest(GCPC 18))</a></li><li class="post-list-item"><a class="post-list-link" href="/20210220-2015ICLFinals/">2021 HZNU Winter Training Day 16 (2015 ICL, Finals, Div. 2)</a></li><li class="post-list-item"><a class="post-list-link" href="/20201213-2020ICPC-Shanghai/">2020 ACM ICPC, Asia Shanghai Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201206-2019ICPC-shanghai/">2019 ACM-ICPC, Asia Shanghai Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201209-2018ICPC-jiaozuo/">2018 ACM-ICPC, Asia Jiaozuo Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201202-2019JUST-Programming-Contest/">2019 JUST Programming Contest</a></li><li class="post-list-item"><a class="post-list-link" href="/20201127-2016ICPC-ChinaFinal/">2016 ACM-ICPC,CHINA-Final shanghai</a></li><li class="post-list-item"><a class="post-list-link" href="/20201125-2020ECNU/">2020 ECNU Campus Online Invitational Contest</a></li><li class="post-list-item"><a class="post-list-link" href="/20201122-2019ICPC-nanjing/">2019 ACM-ICPC, Asia Nanjing Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201121-2018ICPC-nanjing/">2018 ACM-ICPC, Asia Nanjing Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201113-2016ICPC-dalian/">2016 ACM-ICPC, Asia Dalian Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201105-2015ICPC-changchun/">2015 ACM/ICPC, Asia Changchun Regional</a></li><li class="post-list-item"><a class="post-list-link" href="/20201025-2016CCPC-Final/">2016 CCPC Final</a></li><li class="post-list-item"><a class="post-list-link" href="/20201017-2020ZhejiangPCPC/">The 17th Zhejiang Provincial Collegiate Programming Contest</a></li><li class="post-list-item"><a class="post-list-link" href="/20200926-17%E5%B1%8A%E4%B8%AD%E8%AE%A1%E9%87%8F/">第十七届中国计量大学程序设计竞赛（同步赛）</a></li><li class="post-list-item"><a class="post-list-link" href="/20200810-Fahaxiki%EF%BC%81%E7%9A%84%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/">【Fahaxiki！】的训练实录</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2020-2021 lllllan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 8;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
