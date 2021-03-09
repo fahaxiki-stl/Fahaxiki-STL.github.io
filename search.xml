@@ -165,8 +165,8 @@
         <category>训练题解</category>
       </categories>
       <tags>
-        <tag>DFS</tag>
         <tag>状压DP</tag>
+        <tag>DFS</tag>
         <tag>最小生成树</tag>
         <tag>Floyd</tag>
       </tags>
@@ -2417,8 +2417,8 @@ s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class=
         <category>训练题解</category>
       </categories>
       <tags>
-        <tag>Dijkstra</tag>
         <tag>状压DP</tag>
+        <tag>Dijkstra</tag>
         <tag>贪心</tag>
       </tags>
   </entry>
@@ -2810,9 +2810,9 @@ s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class=
         <category>训练题解</category>
       </categories>
       <tags>
+        <tag>交互</tag>
         <tag>DFS</tag>
         <tag>动态规划</tag>
-        <tag>交互</tag>
         <tag>BFS</tag>
         <tag>三分</tag>
         <tag>单调栈</tag>
@@ -3097,8 +3097,8 @@ s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class=
         <category>训练题解</category>
       </categories>
       <tags>
-        <tag>DFS</tag>
         <tag>思维</tag>
+        <tag>DFS</tag>
         <tag>拓扑排序</tag>
         <tag>构造</tag>
       </tags>
@@ -3383,11 +3383,11 @@ s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class=
         <category>训练题解</category>
       </categories>
       <tags>
-        <tag>Dijkstra</tag>
-        <tag>思维</tag>
         <tag>状压DP</tag>
+        <tag>思维</tag>
         <tag>交互</tag>
         <tag>并查集</tag>
+        <tag>Dijkstra</tag>
         <tag>区间DP</tag>
       </tags>
   </entry>
@@ -3547,9 +3547,9 @@ s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class=
         <category>训练题解</category>
       </categories>
       <tags>
+        <tag>思维</tag>
         <tag>Dijkstra</tag>
         <tag>DFS</tag>
-        <tag>思维</tag>
         <tag>动态规划</tag>
       </tags>
   </entry>
